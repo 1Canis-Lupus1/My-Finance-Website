@@ -1,9 +1,11 @@
 import React from "react";
-import { Carousel } from "antd";
+import { Carousel, Card } from "antd";
 import Img1 from "../assets/Finance1.jpeg";
 import Img2 from "../assets/Finance2.png";
 import Img3 from "../assets/Finance3.jpeg";
-import Img4 from "../assets/Finance4.jpeg"
+import Img4 from "../assets/Finance4.jpeg";
+
+const { Meta } = Card;
 
 function Home() {
   const contentStyle = {
@@ -16,20 +18,42 @@ function Home() {
 
   return (
     <div>
-      <h1>Home for SS Finance</h1>
-      <h3>Carousel here</h3>
       <Carousel autoplay>
         <div>
-          <img src={Img1} style={contentStyle,{width:"100%"}} />
+          <Card
+            hoverable
+            style={{ width: 250, margin: "20px" }}
+            cover={<img alt="s&s-logo" src={Img4} />}
+          >
+            <Meta
+              title="Welcome"
+              description="With a trust legacy of customers on our group, we strive to fulfil the aspirations of every Indian."
+            />
+          </Card>
         </div>
         <div>
-          <img src={Img2} style={contentStyle,{width:"100%"}} />
+          <Card
+            hoverable
+            style={{ width: 250, margin: "20px" }}
+            cover={<img alt="s&s-logo" src={Img2} />}
+          >
+            <Meta
+              title="Our Set of Loans"
+              description="We Provide a wide variety of loans services for our valuable customers like Personal Loans, Two-Wheeler Loans,Four Wheeler Loans, etc."
+            />
+          </Card>
         </div>
         <div>
-          <img src={Img3} style={contentStyle,{width:"100%"}} />
-        </div>
-        <div>
-          <img src={Img4} style={contentStyle,{width:"100%"}} />
+          <Card
+            hoverable
+            style={{ width: 250, margin: "20px" }}
+            cover={<img alt="s&s-logo" src={Img3} />}
+          >
+            <Meta
+              title="Why Choose Us?"
+              description="Reasons for why to choose us goes here"
+            />
+          </Card>
         </div>
       </Carousel>
     </div>

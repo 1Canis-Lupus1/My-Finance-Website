@@ -1,21 +1,18 @@
 import React from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Layout, Menu, Card, Dropdown } from "antd";
+import { Layout, Menu } from "antd";
 import {
   MenuUnfoldOutlined,
   MailOutlined,
   MenuFoldOutlined,
   HomeOutlined,
   MessageOutlined,
-  CrownOutlined,
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import Home from "./components/Home";
-import Loans from "./components/Loans";
 import About from "./components/About";
 import ContactUs from "./components/ContactUs";
-import Img4 from "./assets/Finance4.jpeg";
 import PersonalLoans from "./components/PersonalLoans";
 import FourWheelerLoans from "./components/FourWheelerLoans";
 import TwoWheelerLoans from "./components/TwoWheelerLoans";

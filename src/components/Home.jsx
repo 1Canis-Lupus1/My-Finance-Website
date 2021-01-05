@@ -1,6 +1,5 @@
 import React from "react";
 import { Carousel, Card } from "antd";
-import Img4 from "../assets/Finance4.jpeg";
 
 const { Meta } = Card;
 
@@ -20,7 +19,7 @@ function Home() {
           <Card
             hoverable
             style={{ width: 250, margin: "20px" }}
-            cover={<img alt="s&s-logo" src={Img4} />}
+            cover={<img alt="s&s-logo" src="" />}
           >
             <Meta
               title="Welcome"

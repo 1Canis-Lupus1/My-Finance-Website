@@ -1,8 +1,10 @@
 import React from "react";
+import 'font-awesome/css/font-awesome.min.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Layout, Menu, Card, Dropdown } from "antd";
 import {
   MenuUnfoldOutlined,
+  MailOutlined,
   MenuFoldOutlined,
   HomeOutlined,
   MessageOutlined,
@@ -10,14 +12,17 @@ import {
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import Home from "./components/Home";
-import Loans from "./components/Loans"
+import Loans from "./components/Loans";
 import About from "./components/About";
 import ContactUs from "./components/ContactUs";
-import Img4 from "./assets/Finance4.jpeg"
+import Img4 from "./assets/Finance4.jpeg";
+import PersonalLoans from "./components/PersonalLoans";
+import FourWheelerLoans from "./components/FourWheelerLoans";
+import TwoWheelerLoans from "./components/TwoWheelerLoans";
 
 const { Header, Sider, Content } = Layout;
 
-const {Meta}=Card
+const { SubMenu } = Menu;
 
 class App extends React.Component {
   state = {
@@ -48,14 +53,25 @@ class App extends React.Component {
                 <b>Home</b>
                 <Link to="/" />
               </Menu.Item>
-              <Menu.Item
-                key="2"
-                icon={<CrownOutlined style={{ fontSize: "25px" }} />}
+              <SubMenu
+                key="sub1"
+                icon={<MailOutlined style={{ fontSize: "25px" }} />}
+                title="Loans"
                 style={{ fontSize: "20px" }}
               >
-                <b>Loans</b>
-                <Link to="/loans" />
-              </Menu.Item>
+                <Menu.Item key="5">
+                  <b>Personal Loan</b>
+                  <Link to="/personal-loans" />
+                </Menu.Item>
+                <Menu.Item key="6">
+                  <b>Two-Wheeler Loan</b>
+                  <Link to="/two-wheeler-loans" />
+                </Menu.Item>
+                <Menu.Item key="7">
+                  <b>Four-Wheeler Loan</b>
+                  <Link to="/four-wheeler-loans" />
+                </Menu.Item>
+              </SubMenu>
               <Menu.Item
                 key="3"
                 icon={<MessageOutlined style={{ fontSize: "25px" }} />}
@@ -66,7 +82,7 @@ class App extends React.Component {
               </Menu.Item>
               <Menu.Item
                 key="4"
-                icon={<MessageOutlined style={{ fontSize: "25px" }} />}
+                icon={<MailOutlined style={{ fontSize: "25px" }} />}
                 style={{ fontSize: "20px" }}
               >
                 <b>Contact Us</b>
@@ -93,7 +109,9 @@ class App extends React.Component {
               }}
             >
               <Route exact path="/" component={Home} />
-              <Route path="/loans" component={Loans} />
+              <Route path="/personal-loans" component={PersonalLoans} />
+              <Route path="/two-wheeler-loans" component={TwoWheelerLoans} />
+              <Route path="/four-wheeler-loans" component={FourWheelerLoans} />
               <Route path="/about" component={About} />
               <Route path="/contact-us" component={ContactUs} />
             </Content>

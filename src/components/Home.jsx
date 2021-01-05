@@ -1,8 +1,5 @@
 import React from "react";
 import { Carousel, Card } from "antd";
-import Img1 from "../assets/Finance1.jpeg";
-import Img2 from "../assets/Finance2.png";
-import Img3 from "../assets/Finance3.jpeg";
 import Img4 from "../assets/Finance4.jpeg";
 
 const { Meta } = Card;
@@ -35,7 +32,7 @@ function Home() {
           <Card
             hoverable
             style={{ width: 250, margin: "20px" }}
-            cover={<img alt="s&s-logo" src={Img2} />}
+            cover={<img alt="s&s-logo" src="" />}
           >
             <Meta
               title="Our Set of Loans"
@@ -47,7 +44,7 @@ function Home() {
           <Card
             hoverable
             style={{ width: 250, margin: "20px" }}
-            cover={<img alt="s&s-logo" src={Img3} />}
+            cover={<img alt="s&s-logo" src="" />}
           >
             <Meta
               title="Why Choose Us?"

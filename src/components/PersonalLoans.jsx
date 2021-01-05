@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Card, Button, Table } from "antd";
+import { Layout, Card, Button, Table,Alert } from "antd";
 import MyFooter from "./Footer";
 
 const { Content, Sider } = Layout;
@@ -243,7 +243,7 @@ class PersonalLoans extends React.Component {
                 style={{ padding: 24, textAlign: "center" }}
               >
                 {/* Loan Card Here */}
-                <h1 style={{ fontSize: "35px" }}>Customised Personal Loans</h1>
+                <h1 style={{ fontSize: "35px",backgroundColor:"cyan" }}>Customised Personal Loans</h1>
                 <Card
                   style={{ width: "100%" }}
                   //   title="Customised Personal Loans"

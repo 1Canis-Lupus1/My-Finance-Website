@@ -309,7 +309,7 @@ class FourWheelerLoans extends React.Component {
                 style={{ padding: 24, textAlign: "center" }}
               >
                 {/* Loan Card Here */}
-                <h1 style={{fontSize:"25px"}}>Four-Wheeler Loans</h1>
+                <h1 style={{fontSize:"25px",backgroundColor:"black",color:"whitesmoke"}}>Four-Wheeler Loans</h1>
                 <Card
                   style={{ width: "100%" }}
                   // title="Four-Wheeler Loans"

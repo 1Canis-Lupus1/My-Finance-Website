@@ -16,6 +16,8 @@ import ContactUs from "./components/ContactUs";
 import PersonalLoans from "./components/PersonalLoans";
 import FourWheelerLoans from "./components/FourWheelerLoans";
 import TwoWheelerLoans from "./components/TwoWheelerLoans";
+import Shubham from "./components/Shubham";
+import Saif from "./components/Saif"
 
 const { Header, Sider, Content } = Layout;
 
@@ -69,14 +71,25 @@ class App extends React.Component {
                   <Link to="/four-wheeler-loans" />
                 </Menu.Item>
               </SubMenu>
-              <Menu.Item
-                key="3"
+              <SubMenu
+                key="sub11"
                 icon={<MessageOutlined style={{ fontSize: "25px" }} />}
+                title="Testimonial"
                 style={{ fontSize: "20px" }}
               >
-                <b>About</b>
-                <Link to="/about" />
-              </Menu.Item>
+                {/* <Menu.Item key="8">
+                  <b>S & S Finance</b>
+                  <Link to="/about" />
+                </Menu.Item> */}
+                <Menu.Item key="9">
+                  <b>Shubham </b>
+                  <Link to="/shubham" />
+                </Menu.Item>
+                <Menu.Item key="10">
+                  <b>Saif</b>
+                  <Link to="/saif" />
+                </Menu.Item>
+              </SubMenu>
               <Menu.Item
                 key="4"
                 icon={<MailOutlined style={{ fontSize: "25px" }} />}
@@ -110,6 +123,8 @@ class App extends React.Component {
               <Route path="/two-wheeler-loans" component={TwoWheelerLoans} />
               <Route path="/four-wheeler-loans" component={FourWheelerLoans} />
               <Route path="/about" component={About} />
+              <Route path="/shubham" component={Shubham} />
+              <Route path="/saif" component={Saif} />
               <Route path="/contact-us" component={ContactUs} />
             </Content>
           </Layout>

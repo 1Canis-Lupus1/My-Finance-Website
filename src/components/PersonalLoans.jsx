@@ -152,7 +152,7 @@ const contentList = {
       <p>
         <b>Criteria</b>
       </p>
-      <p>The following people are eligible to apply for a Personal Loan:</p>
+      <p style={{ textAlign: "left" }}>The following people are eligible to apply for a Personal Loan:</p>
       <ul>
         <li style={{ textAlign: "left" }}>
           Employees of select private limited companies, employees from public

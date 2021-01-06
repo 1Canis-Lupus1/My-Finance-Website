@@ -60,6 +60,22 @@ function ContactUs() {
 
   const onFinish = (values) => {
     console.log(values);
+    var users=JSON.parse(localStorage.getItem("users") || "[]")
+    users.forEach(function(user,index){
+      console.log("["+index+"]:"+user.id)
+    })
+
+    var user={
+      name: values.user.name,
+      email: values.user.email,
+      phone: values.phone,
+      gender: values.gender,
+      issue: values.issue
+    }
+
+    users.push(user)
+    localStorage.setItem("users",JSON.stringify(users))
+
     form.resetFields();
   };
 

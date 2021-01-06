@@ -1,5 +1,6 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
+import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import {
@@ -9,6 +10,7 @@ import {
   MessageOutlined,
   StarOutlined,
   SettingOutlined,
+  ToolOutlined
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import Home from "./components/Home";
@@ -22,6 +24,7 @@ import Saif from "./components/Saif";
 import MyLogo from "./assets/MyLogo.jpeg";
 import Reviews from "./components/Reviews";
 import Resources from "./components/Resources";
+import ShowIssues from "./components/ShowIssues";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -106,6 +109,13 @@ class App extends React.Component {
                 </Menu.Item>
               </SubMenu>
               <Menu.Item
+                key="12"
+                icon={<ToolOutlined style={{ fontSize: "20px" }} />}
+              >
+                <b>Pending Issues</b>
+                <Link to="/issues" />
+              </Menu.Item>
+              <Menu.Item
                 key="11"
                 icon={<SettingOutlined style={{ fontSize: "20px" }} />}
               >
@@ -134,6 +144,7 @@ class App extends React.Component {
                 <Route path="/reviews" component={Reviews} />
                 <Route path="/contact-us" component={ContactUs} />
                 <Route path="/how-its-done" component={Resources} />
+                <Route path="/issues" component={ShowIssues} />
               </div>
             </Content>
           </Layout>

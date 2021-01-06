@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Card, Button, Table,Alert } from "antd";
 import MyFooter from "./Footer";
+import PersonalPic from "../assets/personal-loan.jpeg"
 
 const { Content, Sider } = Layout;
 
@@ -228,14 +229,6 @@ class PersonalLoans extends React.Component {
     return (
       <div>
         <Layout>
-          <Sider
-            style={{
-              overflow: "auto",
-              height: "100vh",
-              position: "fixed",
-              left: 0,
-            }}
-          ></Sider>
           <Layout className="site-layout">
             <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
               <div
@@ -243,11 +236,10 @@ class PersonalLoans extends React.Component {
                 style={{ padding: 24, textAlign: "center" }}
               >
                 {/* Loan Card Here */}
-                <h1 style={{ fontSize: "35px",backgroundColor:"cyan" }}>Customised Personal Loans</h1>
+                <img src={PersonalPic} style={{height:"30vh",width:"100%"}}/>
+                <hr/>
                 <Card
                   style={{ width: "100%" }}
-                  //   title="Customised Personal Loans"
-                  //   extra={<a href="#">More</a>}
                   tabList={tabList}
                   activeTabKey={this.state.key}
                   onTabChange={(key) => {

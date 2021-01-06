@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Card, Table } from "antd";
 import MyFooter from "./Footer";
+import TwoPic from "../assets/two-wheeler.jpg"
 
 const { Content, Sider } = Layout;
 
@@ -253,14 +254,6 @@ class TwoWheelerLoans extends React.Component {
     return (
       <div>
         <Layout>
-          <Sider
-            style={{
-              overflow: "auto",
-              height: "100vh",
-              position: "fixed",
-              left: 0,
-            }}
-          ></Sider>
           <Layout className="site-layout">
             <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
               <div
@@ -268,7 +261,8 @@ class TwoWheelerLoans extends React.Component {
                 style={{ padding: 24, textAlign: "center" }}
               >
                 {/* Loan Card Here */}
-                <h1 style={{ fontSize: "25px",backgroundColor:"orange" }}>Two-Wheeler Loans</h1>
+                <img src={TwoPic} style={{height:"50vh",width:"100%"}}/><h1 style={{ fontSize: "35px",backgroundColor:"black",color:"whitesmoke" }}><b>Two-Wheeler Loans</b></h1>
+                <hr/>
                 <Card
                   style={{ width: "100%" }}
                   // title="Two-Wheeler Loans"

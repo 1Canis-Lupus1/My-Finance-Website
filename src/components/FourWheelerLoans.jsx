@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Card, Table } from "antd";
 import MyFooter from "./Footer";
+import FourPic from "../assets/four-wheeler.jpg"
 
 const { Content, Footer, Sider } = Layout;
 
@@ -294,14 +295,6 @@ class FourWheelerLoans extends React.Component {
     return (
       <div>
         <Layout>
-          <Sider
-            style={{
-              overflow: "auto",
-              height: "100vh",
-              position: "fixed",
-              left: 0,
-            }}
-          ></Sider>
           <Layout className="site-layout">
             <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
               <div
@@ -309,7 +302,8 @@ class FourWheelerLoans extends React.Component {
                 style={{ padding: 24, textAlign: "center" }}
               >
                 {/* Loan Card Here */}
-                <h1 style={{fontSize:"25px",backgroundColor:"black",color:"whitesmoke"}}>Four-Wheeler Loans</h1>
+                <img src={FourPic} style={{height:"40vh",width:"100%"}}/>
+                <hr/>
                 <Card
                   style={{ width: "100%" }}
                   // title="Four-Wheeler Loans"

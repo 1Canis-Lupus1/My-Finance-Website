@@ -70,7 +70,7 @@ function ContactUs() {
       email: values.user.email,
       phone: values.phone,
       gender: values.gender,
-      issue: values.issue
+      issue: values.user.introduction
     }
 
     users.push(user)

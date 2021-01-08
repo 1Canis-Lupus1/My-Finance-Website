@@ -70,7 +70,8 @@ function ContactUs() {
       email: values.user.email,
       phone: values.phone,
       gender: values.gender,
-      issue: values.user.introduction
+      issue: values.user.introduction,
+      date: moment(Date.now()).format("dddd, MMMM Do YYYY")
     }
 
     users.push(user)

@@ -71,9 +71,9 @@ export class ShowIssues extends Component {
               <>
                 <h5>
                   <b>
-                    ISSUE #{i + 1} (Added On:{" "}
-                    {moment(Date.now()).format("dddd, MMMM Do YYYY")})
+                    ISSUE #{i + 1}  
                   </b>
+                   &nbsp;(Added On: <b><i>{e.date}</i></b>)
                 </h5>
                 <table class="table table-dark">
                   <thead>
